@@ -1,0 +1,20 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 120px; /* Ajuste conforme a altura da navbar */
+}
+
+.faixa {
+    background-color: rgb(19, 188, 226); /* Cor de fundo personalizável */
+    color: #fff;
+    text-align: center;
+    padding: 8px 0; /* Ajuste do tamanho da faixa */
+    position: relative;
+    width: 100%;
+    margin-top: 5px; /* Ajuste conforme a altura da navbar */
+}
+
+.centralizado {
+    text-align: center;
+}

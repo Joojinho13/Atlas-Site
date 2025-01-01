@@ -1,0 +1,99 @@
+header {
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.logo img {
+    width: 130px;
+    height: 70px;
+    margin-left: 270px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.nav-links .nav-icon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 5px;
+}
+
+.nav-item:hover a {
+    background-color: rgb(19, 188, 226);
+    color: white;
+}
+
+.nav-item a.active {
+    font-weight: bold;
+    color: white;
+    background-color: rgb(19, 188, 226);
+}
+
+.btn-container {
+    display: flex;
+    gap: 10px;
+    margin-right: 50px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+}
+
+.btn-login {
+    background-color: #4CAF50; /* Cor do botão de login */
+    color: white;
+}
+
+.btn-login:hover {
+    background-color: #45a049; /* Cor do botão de login ao passar o mouse */
+    color: white;
+}
+
+.btn-register {
+    background-color: #00a6de; /* Cor do botão de registro */
+    color: white;
+}
+
+.btn-register:hover {
+    background-color: #005f79; /* Cor do botão de registro ao passar o mouse */
+    color: white;
+}
