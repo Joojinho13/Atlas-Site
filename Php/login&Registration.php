@@ -13,7 +13,7 @@
 
     <div class="container" id="container">
         <div class="form-container sign-up">
-            <form>
+            <form method="POST">
                 <h1>Criar uma Conta</h1>    
                 <input type="text" placeholder="Nome" required>
                 <input type="email" placeholder="Email" required>
@@ -22,12 +22,12 @@
             </form>
         </div>
         <div class="form-container sign-in">
-            <form>
+            <form method="POST" action="login&Registration.php">
                 <h1>Entrar</h1>
-                <input type="email" placeholder="Email" required>
-                <input type="password" placeholder="Senha" required>
+                <input type="email" placeholder="Email" required name="email">
+                <input type="password" placeholder="Senha" required name="password">
                 <a href="#">Esqueceu sua senha?</a>
-                <button>Entrar</button>
+                <button type="submit" value="Login" name="btnLogin">Login</button>
             </form>
         </div>
         <div class="toggle-container">
@@ -50,3 +50,36 @@
 </body>
 
 </html>
+
+<?php
+$conn = mysqli_connect("localhost", "root", "", "atlaslogin");
+
+if (!$conn) {
+    die("Falha na conexão: " . mysqli_connect_error());
+}
+
+if (isset($_POST['btnLogin'])) {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    // Consulta SQL para verificar se o e-mail existe
+    $sql = "SELECT * FROM logindetails WHERE email = '$email'";
+    $result = mysqli_query($conn, $sql);
+
+    if (mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_assoc($result);
+        $resultPassword = $row['password'];
+
+        // Verificar a senha
+        if ($password === $resultPassword) {
+            header('Location: index.html');
+            exit();
+        } else {
+            echo "<script>alert('Senha incorreta');</script>";
+        }
+    } else {
+        echo "<script>alert('Usuário não encontrado');</script>";
+    }
+}
+?>
+
