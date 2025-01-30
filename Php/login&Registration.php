@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="../Css/login&Registration.css">
+    <link rel="stylesheet" href="../css/login&Registration.css">
     <title>Login & register</title>
 </head>
 
@@ -72,7 +71,7 @@ if (isset($_POST['btnLogin'])) {
 
         // Verificar a senha
         if ($password === $resultPassword) {
-            header('Location: index.html');
+            header('Location: loginSucess.php');
             exit();
         } else {
             echo "<script>alert('Senha incorreta');</script>";

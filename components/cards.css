@@ -1,0 +1,44 @@
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Garante adaptação ao tamanho da tela */
+    gap: 15px; /* Espaçamento entre os cards */
+    padding: 20px;
+    justify-content: center;
+    max-width: 1200px; /* Limita a largura máxima do grid */
+    margin: 0 auto; /* Centraliza na página */
+}
+
+.card {
+    width: 100%; /* Ocupa o espaço disponível */
+    max-width: 250px; /* Define um tamanho máximo para o card */
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card img {
+    width: 100%;
+    height: 140px; /* Reduz a altura da imagem */
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 10px;
+}
+
+.card h3 {
+    margin: 5px 0;
+    font-size: 1rem; /* Reduz o tamanho do título */
+}
+
+.card p {
+    font-size: 0.85rem; /* Ajusta o tamanho do texto */
+    color: #555;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}

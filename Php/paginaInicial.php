@@ -4,29 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atlas - Agência de Viagens</title>
-    <link rel="stylesheet" href="../Css/navBar.css">
-    <link rel="stylesheet" href="../Css/paginaInicial.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+
+    <!-- Importar Navbar -->
+    <link rel="stylesheet" href="../components/navBar.css">
+
+    <!-- Estilo da página inicial -->
+    <link rel="stylesheet" href="../css/paginaInicial.css">
+    
+    <!-- Estilo dos Cards -->
+    <link rel="stylesheet" href="../components/cards.css">
 </head>
 <body>
-    <!-- Incluir a navBar -->
-    <?php include 'navbar.php'; ?>
 
-    <div class="retangulo">
-        <h1> Bem-Vindo(a)
-        </h1>
-        <h2> Pra onde vamos hoje?
-        </h2>
-    </div>
-    <main>
-        <style>
-        .centralizado {text-align: center;}
-        </style>
+    <div class="container">
 
-        <div class="centralizado">
-            
-        </div>   
-    </main>
+        <!-- Incluir a navBar -->
+        <?php include '../components/navBar.php'; ?>
+
+        <!-- Incluir os Cards -->
+        <?php include '../components/cards.php'; ?>
+            <div class="card-grid">
+                <?php
+                renderCard("../cardsImg/portoSeguro.jpg", "Porto Seguro - BH", "Saindo de São Paulo");
+                renderCard("../cardsImg/santaCatarina.jpg", "Santa Catarina - RS", "saindo de São Paulo");
+                renderCard("../cardsImg/rioDeJaneiro.jpg", "Rio de Janeiro - RJ", "saindo de São Paulo");
+                ?>
+            </div>
+    </div> 
 </body>
 </html>
-        

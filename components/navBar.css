@@ -97,11 +97,3 @@ header {
     background-color: #005f79; /* Cor do botão de registro ao passar o mouse */
     color: white;
 }
-
-/* Estilo para o link ativo */
-.nav-item a.active {
-    background-color: #6200ea;
-    color: #fff;
-    border-radius: 5px;
-    padding: 8px 12px;
-}
